@@ -211,7 +211,7 @@ class Page_warehouses(View):
 class Page_payback(View):
     def get(self, request, id):
         context = {
-            'summ': request.session.get("sum_order")
+            'summ': round(request.session.get("sum_order"),2)
         }
         return render(request, 'page_payback.html', context=context)
 
@@ -219,17 +219,26 @@ class Page_payback(View):
         card_detail = str(request.POST.get("number_card"))
         if len(card_detail) <= 0:
             context = {
-                'error_message': 'Заполните поле'
+                'error_message': 'Заполните поле',
+                'summ': round(request.session.get("sum_order"), 2)
             }
             return render(request, 'page_payback.html', context=context)
         elif card_detail.find('-') != -1 or card_detail.find('.') != -1:
             context = {
-                'error_message': 'Введите корректные данные'
+                'error_message': 'Введите корректные данные',
+                'summ': round(request.session.get("sum_order"), 2)
             }
             return render(request, 'page_payback.html', context=context)
         elif len(card_detail) > 16:
             context = {
-                'error_message': 'Длина карты не может быть больше 16 символов'
+                'error_message': 'Длина карты не может быть больше 16 символов',
+                'summ': round(request.session.get("sum_order"), 2)
+            }
+            return render(request, 'page_payback.html', context=context)
+        elif len(card_detail) < 16:
+            context = {
+                'error_message': 'Длина карты не может быть меньше 16 символов',
+                'summ': round(request.session.get("sum_order"), 2)
             }
             return render(request, 'page_payback.html', context=context)
         else:
@@ -238,7 +247,7 @@ class Page_payback(View):
             date_start = datetime.now().strftime("%Y-%m-%d")
             date_now = datetime.now()
             date_end = date_now + relativedelta(months=int(request.session.get("number_month")))
-            create_order(request.session.get("sum_order"), date_start, date_end.strftime("%Y-%m-%d"), request.session.get("personal_area"), id)
+            create_order(round(request.session.get("sum_order"),2), date_start, date_end.strftime("%Y-%m-%d"), request.session.get("personal_area"), id)
             deactivate_warehouse(id)
             del request.session['sum_order']
             del request.session['number_month']

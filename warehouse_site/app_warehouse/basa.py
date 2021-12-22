@@ -115,8 +115,10 @@ def check_orders():
     orders = Orders.objects.all()
     date_now = datetime.now()
     for i in orders:
-        print(i.LeaseEndDate," vs   ",date_now.date())
+
         if i.LeaseEndDate < date_now.date() and i.building_idbuilding.status_warehouse == "Active":
+            print(i)
+            print(i.LeaseEndDate, " vs   ", date_now.date())
             open_warehouse = Building.objects.get(pk=i.building_idbuilding.pk)
             open_warehouse.status_warehouse = "Not active"
             open_warehouse.save()
