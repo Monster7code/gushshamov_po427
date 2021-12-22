@@ -1,0 +1,89 @@
+<!DOCTYPE>
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/main_css.css' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>Личный кабинет</title>
+	</head>
+	<header>
+		<a href="../" class="link_main">На главную</a>
+		<a href="../order_page.html" class="link_order">Оформить заказ</a>
+		<a href="../personal_area.html" class="link_pers_area"><img src="{% static 'images/img_pers_area.jpg' %}" class="link_pers_area"></a>
+	</header>
+	<body>
+        <p class="name_warehouse"> {{ build.warehouse_number }} </p>
+		<form class="info_warehouse" method="POST">
+			{% csrf_token %}
+			<p class="floor">Этаж {{ build.floor_number }}</p>
+			<p class="size">Размер {{ build.warehouse_size }} м2</p>
+			<p class="sum_arend">Стоимость аренды за месяц {{ build.cost_per_month }}</p>
+			<p class="text_month">Количество месяцев</p>
+			<input type="number" name="number_month" class="input_month" placeholder="Введите количество месяцев">
+			{% if role == False %}
+			<input class="create_order" type="submit" value="Заказать">
+			{% endif %}
+		</form>
+		{% if role %}
+			<div class="update_price">
+				<form method="POST">
+						{% csrf_token %}
+						<input class="update_form" type="text" name="upd_price" placeholder="Напишите новую цену">
+						<input class="update_form_sub" type="submit" name="upd_submit" value="Изменить цену">
+				</form>
+			</div>
+			{% if status != 'Active' %}
+				<div class="deactivate_warehouse">
+					<form method="GET">
+						{% csrf_token %}
+						<input class="deactivate_form" type="submit" name="deactivate" value="Отключить склад">
+					</form>
+				</div>
+			{% else %}
+					<div class="activate_warehouse">
+					<form method="GET">
+						{% csrf_token %}
+						<input class="activate_form" type="submit" name="activate" value="Включить склад">
+					</form>
+				</div>
+			{% endif %}
+		{% endif %}
+		<div class="otziv">
+			<p class="text_otziv">Отзывы</p>
+			<div class="otzivi">
+				{% for i in recive %}
+					{% if i.user_iduser.login != login %}
+						<div><b>{{ i.user_iduser.login }}</b>:<br> {{ i.text_review }}</div>
+					{% else %}
+						<div><b>{{ i.user_iduser.login }}</b>:<br> {{ i.text_review }}
+							<form method="POST">
+								{% csrf_token %}
+								<input type="submit" value="Удалить комментарий" name="del_rew">
+								<input style="opacity:0;" type="text" value="{{ i.pk }}" name="id_rew" readonly>
+							</form>
+						</div>
+					{% endif %}
+				{% endfor %}
+				{% if role == False %}
+				<div class="rewiew">
+					<p class="new_rewiew"> <b>Оставить отзыв</b></p>
+						<form method="POST" >
+							{% csrf_token %}
+								<textarea class="new_text_rewiew" name="textarea"></textarea>
+								<br>
+
+								<input class="submit_rew" type="submit" value="Отправить">
+
+						</form>
+			    </div>
+				{% endif %}
+			</div>
+
+		</div>
+
+	</body>
+</html>
+

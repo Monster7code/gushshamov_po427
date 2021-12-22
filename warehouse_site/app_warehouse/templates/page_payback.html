@@ -1,0 +1,23 @@
+<!DOCTYPE>
+{% load static %}
+<html>
+	<head>
+	<link rel="stylesheet" href="{% static 'css/main_css.css' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+		<meta charset="utf-8">
+		<title>Оплата</title>
+	</head>
+	<body>
+		<p class="error_message"> {{ error_message }}</p>
+		<form class="clas_form" method="POST">
+			{% csrf_token %}
+			<p class="number_card">Номер карты  <input type="number" name="number_card"> </p>
+			<p class="sum_order">Сумма к оплате {{ summ }}</p>
+			<p class="pay"><input style="width:80px;height:30px;border-radius:50px 0px 50px 0px;background-color:#8ABDFF;" type="submit" value="Оплатить"></p>
+		</form>
+	</body>
+</html>
+

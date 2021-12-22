@@ -1,0 +1,93 @@
+<!DOCTYPE>
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/main_css.css' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>Оформление заказа</title>
+	</head>
+	<header>
+		<a href="../" class="link_main">На главную</a>
+		<a href="../order_page.html" class="link_order">Оформить заказ</a>
+		<a href="../personal_area.html" class="link_pers_area"><img src="{% static 'images/img_pers_area.jpg' %}" class="link_pers_area"></a>
+	</header>
+	<body>
+		<div class="warehouse">
+			<img src = "{% static 'images/warehouse_1_floor.png' %}">
+			<a href = "../order_page.html">
+					<img src="{% static 'images/sub.png' %}" class="exit">
+			</a>
+
+			<!------------Первый этаж вверх--------->
+			{% for zdanie in building %}
+				{% if zdanie.warehouse_number == 'B1' %}
+					{% if zdanie.status_warehouse == 'Active' %}
+						<input type="button" class="B1" value="B1" style="background-color:red;" onclick="window.location.href='../page_warehouses.html/8'">
+					{% else %}
+						<input type="button" class="B1" value="B1" onclick="window.location.href='../page_warehouses.html/8'">
+
+					{% endif %}
+				{% endif %}
+
+				{% if zdanie.warehouse_number == 'B2' %}
+					{% if zdanie.status_warehouse == 'Active' %}
+						<input type="button" class="B2" value="B2" style="background-color:red;" onclick="window.location.href='../page_warehouses.html/9'">
+					{% else %}
+						<input type="button" class="B2" value="B2" onclick="window.location.href='../page_warehouses.html/9'">
+
+					{% endif %}
+				{% endif %}
+
+				{% if zdanie.warehouse_number == 'B3' %}
+					{% if zdanie.status_warehouse == 'Active' %}
+						<input type="button" class="B3" value="B3" style="background-color:red;" onclick="window.location.href='../page_warehouses.html/10'">
+					{% else %}
+						<input type="button" class="B3" value="B3" onclick="window.location.href='../page_warehouses.html/10'">
+
+					{% endif %}
+				{% endif %}
+
+				<!------------Первый этаж низ--------->
+				{% if zdanie.warehouse_number == 'B4' %}
+					{% if zdanie.status_warehouse == 'Active' %}
+						<input type="button" class="B4" value="B4" style="background-color:red;" onclick="window.location.href='../page_warehouses.html/11'">
+					{% else %}
+						<input type="button" class="B4" value="B4" onclick="window.location.href='../page_warehouses.html/11'">
+
+					{% endif %}
+				{% endif %}
+
+				{% if zdanie.warehouse_number == 'B5' %}
+					{% if zdanie.status_warehouse == 'Active' %}
+						<input type="button" class="B5" value="B5" style="background-color:red;" onclick="window.location.href='../page_warehouses.html/12'">
+					{% else %}
+						<input type="button" class="B5" value="B5" onclick="window.location.href='../page_warehouses.html/12'">
+
+					{% endif %}
+				{% endif %}
+
+				{% if zdanie.warehouse_number == 'B6' %}
+					{% if zdanie.status_warehouse == 'Active' %}
+						<input type="button" class="B6" value="A6" style="background-color:red;" onclick="window.location.href='../page_warehouses.html/13'">
+					{% else %}
+						<input type="button" class="B6" value="B6" onclick="window.location.href='../page_warehouses.html/13'">
+
+					{% endif %}
+				{% endif %}
+
+				{% if zdanie.warehouse_number == 'B7' %}
+					{% if zdanie.status_warehouse == 'Active' %}
+						<input type="button" class="B7" value="B7" style="background-color:red;" onclick="window.location.href='../page_warehouses.html/14'">
+					{% else %}
+						<input type="button" class="B7" value="B7" onclick="window.location.href='../page_warehouses.html/14'">
+
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</body>	
+</html>
+

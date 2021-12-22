@@ -1,0 +1,35 @@
+<!DOCTYPE>
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/main_css.css' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>Регистрация</title>
+	</head>
+	<body>
+
+		<p class="text_registr" align="center">
+			Регистрация
+		</p>
+		<div class="window_registr">
+			<div style="color:red;  position : absolute;top :10%;left : 33%; height:12%; width:38%">
+
+					{{ error_message }}
+			</div>
+			<form method="post" name="reg_user">
+				{% csrf_token %}
+
+				<div class="div_login_regist"><input type="text" class="input_login" placeholder="Логин" name="enter_login"></div><div data-tooltip="Длина логина не должна превышать 25 символов" class="help_login">?</div>
+				
+				<div class="div_password_regist"><input type="password" class="input_password"  name="enter_password" placeholder="Пароль"></div><div data-tooltip="Длина пароля не должна превышать 10 символов" class="help_password">?</div>
+				<input type="submit" class="send_reg_data" value="Создать">
+			</form>
+		</div>
+		<img src="{% static 'images/warehouse_car1.png' %}" class="first_car">
+		<img src="{% static 'images/warehouse_car2.png' %}" class="second_car">
+	</body>	
+</html>
+

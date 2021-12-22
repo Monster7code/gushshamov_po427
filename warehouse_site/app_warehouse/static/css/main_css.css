@@ -1,0 +1,678 @@
+.circle_form{
+	background-color : #78A5DF;
+	height: 350px;
+	width:350px;
+	border-radius: 17em;
+	position:absolute;
+	top:30%;
+	left:38%;
+	text-align:center;
+	
+}
+.form_log_in_login{
+	position:absolute;
+	top:50%;
+	left:26%;
+}
+
+.form_log_in_password{
+	position:absolute;
+	top:63%;
+	left:26%;
+}
+.img_chess{
+	position:absolute;
+	top:10%;
+	left:28%;
+	height:130px;
+}
+.link_on_page_reg{
+	position:absolute;
+	top:87%;
+	left:37%;
+	text-decoration: none;
+	
+}
+
+.text_registr{
+	
+	font-size:40px;
+	position:absolute;
+	top:18%;
+	left:44.5%;
+	font-family: 'Poppins', sans-serif;
+	
+}
+.window_registr{
+	background-color : #78A5DF;
+	height: 350px;
+	width:450px;
+	position:absolute;
+	top:40%;
+	left:38.6%;
+	border-radius: 2em;
+	font-family: 'Poppins', sans-serif;
+}
+.first_car{
+	position:absolute;
+	top:55%;
+	left: 7%;
+	height:350;
+	width:350;
+	
+}
+
+.second_car{
+	position:absolute;
+	top:15%;
+	left: 72%;
+	height:340;
+	width:350;
+	
+}
+.div_login_regist{
+	position:absolute;
+	background-color:#5878A3;
+	height:50px;
+	width:215px;
+	top:30%;
+	left:27%;
+	border-radius: 11em;
+}
+.input_login{
+	position:absolute;
+	top:27%;
+	left:11%;
+	
+}
+[data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 300px; /* Ширина подсказки */
+    left: 0; top: 0; /* Положение подсказки */
+    background: #3D5371; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+	opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+	pointer-events: none; /* Подсказка */
+	z-index:3;
+} 
+ [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+   }
+.help_login{
+	position:absolute;
+	top:34%;
+	left:71.5%;
+}
+
+.div_password_regist{
+	position:absolute;
+	background-color:#5878A3;
+	height:50px;
+	width:215px;
+	top:50%;
+	left:27%;
+	border-radius: 11em;
+}
+.input_password{
+	position:absolute;
+	top:33%;
+	left:11%;
+}
+.help_password{
+	position:absolute;
+	top:55%;
+	left:71.5%;
+}
+
+.send_reg_data{
+	position:absolute;
+	top:77%;
+	left:37%;
+	background-color:#5878A3;
+	font-size:17px;
+	font-family: 'Poppins', sans-serif;
+	color:white;
+	border-radius: 1em;
+	height:35px;
+	width:130px;
+	
+}
+.login_in_site{
+	color:white;
+	position:absolute;
+	top:76%;
+	left:35%;
+	background-color:#5878A3;
+	border-radius: 2em;
+	width : 100px;
+	height:28px;
+}
+
+/*Главная страничка*/
+header{
+	background-color:#5878A3;
+	height:9%;
+	width:100%;
+	padding:0;
+	margin:0 auto;
+	position:absolute;
+	left:0%;
+	top:-0%;
+}
+.div_main_img{
+	background-color:#EFEFEF;
+	height:700px;
+	width:100%;
+	position:absolute;
+	left:0%;
+	top:9%;
+}
+.main_img{
+	height:500px;
+	width:600px;
+	position:absolute;
+	left:7%;
+	top:14%;
+}
+.text_for_m_img{
+	font-family: 'Poppins', sans-serif;
+	font-size:23px;
+	position:absolute;
+	left:50%;
+	top:37%;
+	
+}
+.warehouse_inside{
+	position:absolute;
+	left:0%;
+	top:89%;
+	background-color:#504DC2;
+	height:700px;
+	width:100%;
+}
+.main_inside_img{
+	height:500px;
+	width:600px;
+	position:absolute;
+	left:57%;
+	top:15%;
+	
+}
+.text_for_inside_img{
+	font-family: 'Poppins', sans-serif;
+	font-size:23px;
+	position:absolute;
+	left:5%;
+	top:33%;
+	width:700px;
+	color:white;
+}
+.how_make_order{
+	background-color:#EFEFEF;
+	height:700px;
+	width:100%;
+	position:absolute;
+	left:0%;
+	top:169%;
+}
+.how_make_order_img{
+	height:500px;
+	width:600px;
+	position:absolute;
+	left:6%;
+	top:22%;
+}
+.text_for_order_img{
+	font-family: 'Poppins', sans-serif;
+	font-size:23px;
+	position:absolute;
+	left:55%;
+	top:32%;
+	width:700px;
+}
+.link_main{
+	font-family: 'Poppins', sans-serif;
+	font-size:33px;
+	position:absolute;
+	left:8%;
+	top:13%;
+	color:white;
+	text-decoration: none;
+}
+.link_order{
+	font-family: 'Poppins', sans-serif;
+	font-size:33px;
+	position:absolute;
+	left:44%;
+	top:13%;
+	color:white;
+	text-decoration: none;
+}
+.link_pers_area{
+	position:absolute;
+	left:84%;
+	top:1%;
+	height:70px;
+	width:80px;
+}
+/*Заказы*/
+.warehouse{
+	position:absolute;
+	left:22%;
+	top:14%;
+}
+.exit{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:78%;
+	top:7%;
+	
+}
+/*Помещения первый этаж*/
+.A1{
+	
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:5.5%;
+	top:6.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+
+.A2{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:29.5%;
+	top:6.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.A3{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:54%;
+	top:6.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.A4{
+	
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:5.5%;
+	top:64.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.A5{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:29.5%;
+	top:64.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.A6{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:54%;
+	top:64.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+
+.A7{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:78.1%;
+	top:64.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+
+.A1:hover, .A2:hover, .A3:hover, .A4:hover, .A5:hover, .A6:hover, .A7:hover {
+  transform: scale(1.1);
+  
+  transition: transform 0.8s;
+
+
+}
+.B1{
+	
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:5.5%;
+	top:6.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.B2{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:29.5%;
+	top:6.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.B3{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:54%;
+	top:6.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.B4{
+	
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:5.5%;
+	top:64.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.B5{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:29.5%;
+	top:64.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+.B6{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:54%;
+	top:64.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+
+.B7{
+	height:200px;
+	width:150px;
+	position:absolute;
+	left:78.1%;
+	top:64.5%;
+	background-color:blue;
+	font-size:26px;
+	
+}
+
+.B1:hover, .B2:hover, .B3:hover, .B4:hover, .B5:hover, .B6:hover, .B7:hover {
+  transform: scale(1.1);
+  
+  transition: transform 0.8s;
+  
+}
+/*Личный кабинет*/
+.nickname_user{
+	position:absolute;
+	left:87%;
+	top:7%;
+	font-family: 'Poppins', sans-serif;
+	font-size:26px;
+	font-width:40px;
+}
+.swap_acc{
+    position:absolute;
+	left:86.8%;
+	top:23%;
+	font-family: 'Poppins', sans-serif;
+	font-size:15px;
+	width:140px;
+	height: 60px;
+	background-color: #5878A3;
+}
+.table_order{
+	position:absolute;
+	left:32%;
+	top:30%;
+	border:3px;
+	padding: 3px; /* Поля вокруг содержимого таблицы */
+  /*  border: 2px solid black; /* Параметры рамки */
+	font-family: 'Poppins', sans-serif;
+	border-collapse:collapse;
+}
+th{
+	padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+}
+td{
+	
+	text-align:center;
+	padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+}
+.your_order{
+	position:absolute;
+	left:32%;
+	top:19%;
+	font-family: 'Poppins', sans-serif;
+	font-size:32px;
+	color:#5878A3;
+}
+.name_warehouse{
+    position:absolute;
+	left:49%;
+	top:13%;
+	font-size:30;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+	color:#8ABDFF;
+}
+.info_warehouse{
+    position:absolute;
+	left:35%;
+	top:27%;
+	width:30%;
+	height:40%;
+	background-color:#E1E1E1;
+	font-size:23px;
+	font-weight: bold;
+}
+.floor{
+    position:absolute;
+	left:10%;
+	top:5%;
+}
+.sum_arend{
+    position:absolute;
+	left:10%;
+	top:25%;
+}
+.text_month{
+    position:absolute;
+	left:10%;
+	top:65%;
+}
+.size{
+    position:absolute;
+	left:10%;
+	top:45%;
+}
+.input_month{
+    position:absolute;
+	left:52%;
+	top:73%;
+	width:46%;
+}
+.create_order{
+    position:absolute;
+	left:41%;
+	top:87%;
+	width: 20%;
+	height: 9%;
+	background-color:#8ABDFF;
+	border-radius: 10px;
+	font-family: 'Poppins', sans-serif;
+}
+.otziv{
+    position:absolute;
+	left:35%;
+	top:70%;
+	width: 30%;
+	height: 100%;
+}
+.text_otziv{
+	font-family: 'Poppins', sans-serif;
+    font-size:30px;
+    position:absolute;
+	left:0%;
+	top:0%;
+	font-weight: bold;
+
+}
+.otzivi{
+    font-family: 'Poppins', sans-serif;
+    position:absolute;
+	left:8%;
+	top:10%;
+
+}
+.rewiew{
+    width: 100%;
+	height: 40%;
+    position:relative;
+    left:88px;
+    top:20px;
+
+}
+.deactivate_warehouse{
+    position:absolute;
+	left:70%;
+	top:45%;
+	width: 7.1%;
+	height: 5%;
+	background-color:red;
+
+}
+.deactivate_form{
+    width: 100%;
+	height: 100%;
+	background-color:red;
+	color:white;
+	font-family: 'Poppins', sans-serif;
+	font-size:13;
+	text-align:center
+}
+.clas_form{
+    position:absolute;
+	left:35%;
+	top:27%;
+	width:30%;
+	height:40%;
+	background-color:#E1E1E1;
+	font-size:23px;
+	font-weight: bold;
+}
+.number_card{
+    position:absolute;
+	left:8%;
+	top:19%;
+}
+.sum_order{
+    position:absolute;
+	left:8%;
+	top:46%;
+}
+.pay{
+   position:absolute;
+	left:43%;
+	top:72%;
+
+}
+.error_message{
+    width:9%;
+    position:absolute;
+	left:47%;
+	top:18%;
+	color:red;
+	font-width:9%;
+}
+.activate_warehouse{
+    position:absolute;
+	left:70%;
+	top:45%;
+	width: 7.1%;
+	height: 5%;
+	background-color:#8ABDFF;
+
+}
+.activate_form{
+    width: 100%;
+	height: 100%;
+	background-color:#8ABDFF;
+	color:white;
+	font-family: 'Poppins', sans-serif;
+	font-size:13;
+	text-align:center
+}
+.new_rewiew{
+    font-family: 'Poppins', sans-serif;
+    font-size:30px;
+
+	font-weight: bold;
+
+}
+.new_text_rewiew{
+    width:90%;
+
+    position:relative;
+    left:5%;
+}
+.submit_rew{
+    position:relative;
+    left:32%;
+    top:130%;
+
+    background-color:#4C9CE2;
+}
+.update_price{
+    position:absolute;
+	left:70%;
+	top:40%;
+	width: 7.1%;
+	height: 5%;
+
+}
+.update_form_sub{
+    position:absolute;
+	left:140%;
+	top:0%;
+    height:50%;
+	background-color:#8ABDFF;
+	font-family: 'Poppins', sans-serif;
+	font-size:13;
+	text-align:center
+}

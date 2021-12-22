@@ -1,0 +1,42 @@
+
+<!DOCTYPE>
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/main_css.css' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>Хранилище</title>
+	</head>
+	<header>
+		<a href="../" class="link_main">На главную</a>
+		<a href="../order_page.html" class="link_order">Оформить заказ</a>
+		<a href="../personal_area.html" class="link_pers_area"><img src="{% static 'images/img_pers_area.jpg' %}" class="link_pers_area"></a>
+	</header>
+	<body>
+		<div class="div_main_img">
+			<img src="{% static 'images/mainWarehouse.jpg' %}" class="main_img">
+			<p class="text_for_m_img">
+			  Основное здание где находяться ячейки для хранения, после оформления заказа онлайн или для аренды склада офлайн приежайте к нам, здесь вас встретит добродушный персонал который ответит на любой ваш вопрос!
+			</p>
+		</div>
+		
+		<div class="warehouse_inside" >
+			<img src="{% static 'images/pic_warehouse_inside.jpg' %}" class="main_inside_img">
+			<p class="text_for_inside_img">
+			  Так выглядит наше помещение изнутри, оно разделенно на две части, где первый этаж это помещения на 15 квадратных метров, а второй этаж это помещения на 25 квадратных метров.<br>
+			  У каждого мини-склада есть свой уникальный номер, от каждого склада есть ключ, его необходимо получить на вахте. В случаи если вы оформляли онлайн то вам нужно паказать активный заказ в личном кабинете.
+			</p>
+		</div>
+		<div class="how_make_order">
+			<img src="{% static 'images/how_make_order.jpg' %}" class="how_make_order_img">
+			<p class="text_for_order_img">
+				Чтобы оформить заказ вам нужно нажать на "Оформить заказ" далее вам нужно выбрать склад, который подходит вам по размеру после необходимо нажать на иконку склада, далее вы заполняете
+				форму где выбираете количество месяцев и нажимаете продолжить, вас перекидывают на страницу оплату. После оплаты перейдите в ваш личный кабинент и проверьте заказ.
+			</p>
+		</div>
+	</body>	
+</html>
+
