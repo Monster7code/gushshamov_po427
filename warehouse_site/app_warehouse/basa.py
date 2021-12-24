@@ -108,7 +108,7 @@ def get_sum(id):
 def create_order(summ, date_start, date_end, id_user, id_build):
     personal = PersonalArea.objects.filter(pk=id_user)
     build = Building.objects.filter(pk=id_build)
-    new_order = Orders(OrderSum=summ, LeaseStartDate=date_start, LeaseEndDate=date_end, personal_area_idpersonal_area=personal[0], building_idbuilding=build[0])
+    new_order = Orders(OrderSum=summ, LeaseStartDate=date_start, LeaseEndDate=date_end, personal_area_idpersonal_area=personal[0], building_idbuilding=build[0], active_status=1)
     new_order.save()
 
 def check_orders():
@@ -116,12 +116,15 @@ def check_orders():
     date_now = datetime.now()
     for i in orders:
 
-        if i.LeaseEndDate < date_now.date() and i.building_idbuilding.status_warehouse == "Active":
+        if i.LeaseEndDate < date_now.date() and i.active_status == 1:
             print(i)
             print(i.LeaseEndDate, " vs   ", date_now.date())
+
             open_warehouse = Building.objects.get(pk=i.building_idbuilding.pk)
             open_warehouse.status_warehouse = "Not active"
             open_warehouse.save()
+            i.active_status = 0
+            i.save()
 
 
 def update_price(id, price):

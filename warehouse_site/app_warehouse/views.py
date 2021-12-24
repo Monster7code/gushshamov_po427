@@ -29,6 +29,7 @@ class MainPage(View):
 
 class Order_Page(View):
     def get(self, request):
+
         try:
             personal_area = request.session.get("personal_area")
             if personal_area is None:
