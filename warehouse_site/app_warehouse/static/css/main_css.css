@@ -175,14 +175,14 @@ header{
 	width:600px;
 	position:absolute;
 	left:7%;
-	top:14%;
+	top:9%;
 }
 .text_for_m_img{
 	font-family: 'Poppins', sans-serif;
 	font-size:23px;
 	position:absolute;
 	left:50%;
-	top:37%;
+	top:32%;
 	
 }
 .warehouse_inside{
@@ -198,7 +198,7 @@ header{
 	width:600px;
 	position:absolute;
 	left:57%;
-	top:15%;
+	top:10%;
 	
 }
 .text_for_inside_img{
@@ -206,7 +206,7 @@ header{
 	font-size:23px;
 	position:absolute;
 	left:5%;
-	top:33%;
+	top:28%;
 	width:700px;
 	color:white;
 }
