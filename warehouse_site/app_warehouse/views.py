@@ -109,6 +109,12 @@ class Page_registr(View):
                 'error_message': 'Пользователь с таким именнем уже существует'
             }
             return render(request, 'page_registr.html', context=context)
+
+        elif entered_login.find(' ') != -1 or entered_passw.find(' ') != -1:
+            context = {
+                'error_message': 'Нельзя использовать пробельные символы'
+            }
+            return render(request, 'page_registr.html', context=context)
         else:
             create_account(entered_login, entered_passw)
 
